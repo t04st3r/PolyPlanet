@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Dodecaedro</title>
+        <title>PolyPlanet</title>
+        <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAADm5uYA39/fAOjo6AD///8Aurq6APz8/ADX19cAZGRkAOfn5wBGRkYA6+vrAAAAAAAAAAAAAAAAAAAAAAAAAAAAMzMzMzMzMzMzMzM5kzMzMzMzM5qpMzMzMzM5SqSTMzMzM5NKpGkzMzM5NKqgRpMzM5M0qqpGaTM3M0qqqhRmk3MzRERERGZpdERKqqqEREk3M1SqqkZmkzNzNKqiRmkzMzdzSqRnczMzMzd3d3MzMzMzMzMzMzMzMzMzMzMzMzMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" rel="icon" type="image/x-icon" />
         <?php include_once 'php/header.php'; ?>
     </head>
     <body>
@@ -13,12 +14,7 @@
                     <group render='true' id='axes'>
                         <transform rotation='0 1 0 0.1' scale='1.5 1.5 1.5' traslation='0 -1.2 0'>
                             <collision DEF='DoNotCollideWithVisualizationWidget' enabled='false'>
-                                <!-- Invoke CoordinateAxes in other scenes as an Inline child inside a scaling Transform node, at the topmost level of the scene graph. --> 
-                                <!-- This NavigationInfo allows examine mode and will be overridden by any parent scene. --> 
-                                <!-- Each arrow goes from +1m to -1m to allow linear scaling to fit a scene --> 
-                                <!-- Note each label rotates about the scene's vertical Y axis for consistency, enabling local orientation by user --> 
-                                <!-- From X3D Abstract Specification Section 25.3.3 GeoLocation: "In addition to placing a X3D model at the correct geospatial location, the GeoLocation node will also adjust the orientation of the model appropriately. The standard X3D coordinate system specifies that the +Y axis = up, +Z = out of the screen, and +X = towards the right. The GeoLocation node will set the orientation so that the +Y axis is the up direction for that local area (the normal to the tangent plane on the ellipsoid), -Z points towards the north pole, and +X is east." -->
-                                <group>
+                                 <group>
                                     <!-- Vertical Y arrow and label -->
                                     <group>
                                         <transform scale='2 3 2'>

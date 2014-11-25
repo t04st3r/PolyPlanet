@@ -8,16 +8,3 @@
     <li role="presentation" class="myTab"><a href="#icosa" id="aIcosa" aria-controls="icosa" role="tab" data-toggle="tab">Icosaedro</a></li>
     <li role="presentation" class="myTab"><a href="#aboutMe" id="aAboutMe" aria-controls="aboutMe" role="tab" data-toggle="tab">About Me</a></li>
 </ul>
-<!-- 
-<div class="tab-content setMarginTop">
-    <div role="tabpanel" class="tab-pane active" id="home"></div>
-    <div role="tabpanel" class="tab-pane fade" id="tetra"><?php //include_once 'php/thetra.php'; ?></div>
-    <div role="tabpanel" class="tab-pane fade" id="esa"><?php //include_once 'php/esa.php'; ?></div>
-    <div role="tabpanel" class="tab-pane fade" id="otta"></div>
-    <div role="tabpanel" class="tab-pane fade" id="dodeca"><?php //include_once 'php/dodeca.php'; ?></div>
-    <div role="tabpanel" class="tab-pane" id="icosa"></div>
-    <div role="tabpanel" class="tab-pane" id="otta"></div>
-    <div role="tabpanel" class="tab-pane" id="aboutMe"></div>
-</div>
-
-</div> Tab panes -->
