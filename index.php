@@ -119,7 +119,7 @@
                             <transform id="mainTrasform" scale="2 2 2">
                                 <shape>
                                     <appearance>
-                                        <material id="polyColor" diffuseColor="white" transparency="0"></material>
+                                        <material id="polyColor" diffuseColor="white" transparency="0.4"></material>
                                     </appearance>
                                     <indexedfaceset solid="true"
                                                     coordIndex="4 7 8 -1 5 6 7 -1 4 5 7 -1 6 0 1 -1 5 10 0 -1 6 5 0 -1 6 3 7 -1 1 2 3 -1 6 1 3 -1 9 4 11 -1 10 5 4 -1 9 10 4 -1 12 9 13 -1 0 10 9 -1 12 0 9 -1 14 0 12 -1 2 1 0 -1 14 2 0 -1 17 3 15 -1 8 7 3 -1 17 8 3 -1 16 8 17 -1 11 4 8 -1 16 11 8 -1 18 11 16 -1 13 9 11 -1 18 13 11 -1 19 13 18 -1 14 12 13 -1 19 14 13 -1 15 14 19 -1 3 2 14 -1 15 3 14 -1 16 19 18 -1 17 15 19 -1 16 17 19 -1 "
@@ -131,8 +131,8 @@
                                 </shape> 
                             </transform>
                         </transform>
-                        <transform rotation="1 0 1 0.115" scale="0.8 0.8 0.8">
-                            <transform rotation="-1 0 1 0.5">
+                        <transform rotation="1 0 1 0.05" scale="0.8 0.8 0.8">
+                            <transform rotation="-1 0 1 0.2">
                                 <Viewpoint bind='false' centerOfRotation='0,0,0' fieldOfView='0.9' isActive='true' orientation='0,1,0,1' position='12.8,0.7,8'></Viewpoint>
                                 <!-- change enabled attribute to perform initial Polyhedra state (idle or rotating) --> 
                             </transform>

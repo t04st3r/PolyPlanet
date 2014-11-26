@@ -1,8 +1,12 @@
 <div id="controlsContainer">
     
     <!-- Slider for opacity regolation -->
-   <label for="slider" id="sliderLabel" classe="orange">Cambia Opacità</label>
+   <label for="slider" id="sliderLabel">Opacità</label>
     <div id="slider" class="ui-slider-horizontal"></div>
+    
+    <select name="textureSelect" id="textureSelect">
+        
+    </select>
     
     <!-- Change Poliherda color Button using color picker -->
     <button id="picker" class="btn btn-warning">Cambia Colore</button>
