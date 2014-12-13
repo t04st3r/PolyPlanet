@@ -1,34 +1,36 @@
 <div id="controlsContainer">
-    
-    <!-- Slider for opacity regolation -->
-   <label for="slider" id="sliderLabel">Opacità</label>
-    <div id="slider" class="ui-slider-horizontal"></div>
-    
-    <select name="textureSelect" id="textureSelect">
-        
-    </select>
-    
-    <!-- Change Poliherda color Button using color picker -->
-    <button id="picker" class="btn btn-warning">Cambia Colore</button>
-    
+
     <!-- Show Polihedra information Button triggering modal window -->
     <button  data-toggle="modal" class="btn btn-warning" data-target="#myModal">
         Informazioni
     </button>
 
-    <!-- toggle texture on the Polyhedra TODO spinner with various textures to choose -->
-    <button  id="texture" class="btn btn-warning">
-        Texture
-    </button>
-
     <!-- Toggle Rotation -->
-    <button  type="button" id="yRotation" class="btn btn-warning" data-toggle="button" aria-pressed="false">
+    <button  type="button" id="yRotation" class="btn btn-warning">
         Rotazione
     </button>
-    
+
     <!-- Center Polyhedron View Button -->
-    <button type="button" id="toggleAxis" class="btn btn-warning" data-toggle="button" aria-pressed="false">
+    <button type="button" id="toggleAxis" class="btn btn-warning">
         Visualizza/Nascondi Assi
     </button>
 
+    <!-- Change Poliherda color Button using color picker -->
+    <button id="picker" class="btn btn-warning">Cambia Colore</button><br/>
+
+
+    <!-- Slider for opacity regolation -->
+    <label for="slider" class="Label">Opacità</label>
+    <div id="slider" class="ui-slider-horizontal"></div>
+   
+        <label for="textureSelect" class="Label">Textures</label><br/>
+        <select name="textureSelect" id="textureSelect">
+            <?php
+            $files = scandir('media/textures');
+            $length = count($files);
+            echo '<option value="null" selected>Scegli una Texture</option>';
+            for ($i = 2; $i < $length; $i++)
+                echo '<option value="' . $files[$i] . '">' . substr($files[$i], 0, -4) . '</option>';
+            ?>   
+        </select>
 </div>

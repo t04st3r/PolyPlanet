@@ -13,7 +13,7 @@
                 <scene>
                     <group render='true' id='axis'>
                         <transform rotation='0 1 0 0.1' scale='1.5 1.5 1.5' traslation='0 -1.2 0'>
-                            <collision DEF='DoNotCollideWithVisualizationWidget' enabled='false'>
+                            <collision DEF='DoNotCollideWithVisualizationWidget' enabled='true'>
                                 <group>
                                     <!-- Vertical Y arrow and label -->
                                     <group>
@@ -119,7 +119,7 @@
                             <transform id="mainTrasform" scale="2 2 2">
                                 <shape>
                                     <appearance>
-                                        <material id="polyColor" diffuseColor="white" transparency="0.4"></material>
+                                        <material id="polyColor" diffuseColor="white" transparency="0"></material>
                                     </appearance>
                                     <indexedfaceset solid="true"
                                                     coordIndex="4 7 8 -1 5 6 7 -1 4 5 7 -1 6 0 1 -1 5 10 0 -1 6 5 0 -1 6 3 7 -1 1 2 3 -1 6 1 3 -1 9 4 11 -1 10 5 4 -1 9 10 4 -1 12 9 13 -1 0 10 9 -1 12 0 9 -1 14 0 12 -1 2 1 0 -1 14 2 0 -1 17 3 15 -1 8 7 3 -1 17 8 3 -1 16 8 17 -1 11 4 8 -1 16 11 8 -1 18 11 16 -1 13 9 11 -1 18 13 11 -1 19 13 18 -1 14 12 13 -1 19 14 13 -1 15 14 19 -1 3 2 14 -1 15 3 14 -1 16 19 18 -1 17 15 19 -1 16 17 19 -1 "

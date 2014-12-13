@@ -34,11 +34,12 @@ body {
 }
 
 #controlsContainer {
+    display: none;
     margin-left: 30px;
 }
 
 #x3dContainer {
-    display: block;
+    display: none;
 }
 
 button {
@@ -51,10 +52,20 @@ button {
      width: 200px;
 }
 
-#sliderLabel {
+.Label {
     margin-left: 10px;
     color: white;
     font-size: 15px;
+    margin-top: 30px;
+}
+
+select {
+    width: 200px;
+    height: 20px;
+    margin-left: 10px;
+    font-size: 14px;
+    color: darkblue;
+    
 }
 
 X3D, x3d {
