@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    //declare points and indexedFaceSet of every polyhedron
+    //declare an array that will holds polyhedron features
     var polys = new Array(),
             index = -1,
             whiteColor = '1 1 1',
@@ -14,6 +16,7 @@ $(document).ready(function () {
             icosaIndexed = '0 1 2 -1 1 0 5 -1 0 2 3 -1 0 3 4 -1 0 4 5 -1 1 5 10 -1 2 1 6 -1 3 2 7 -1 4 3 8 -1 5 4 9 -1 1 10 6 -1 2 6 7 -1 3 7 8 -1 4 8 9 -1 5 9 10 -1 6 10 11 -1 7 6 11 -1 8 7 11 -1 9 8 11 -1 10 9 11 -1 ',
             icosaPoint = '0.000000 0.000000 -1.000000 0.723600 -0.525720 -0.447215 -0.276385 -0.850640 -0.447215 -0.894425 0.000000 -0.447215 -0.276385 0.850640 -0.447215 0.723600 0.525720 -0.447215 0.276385 -0.850640 0.447215 -0.723600 -0.525720 0.447215 -0.723600 0.525720 0.447215 0.276385 0.850640 0.447215 0.894425 0.000000 0.447215 0.000000 0.000000 1.000000 ';
 
+    //Polyhedron Object Constructor  
     function poly(indexed, point, color, texture, rotation, axis, opacity) {
         this.indexed = indexed;
         this.point = point;
@@ -24,6 +27,7 @@ $(document).ready(function () {
         this.opacity = opacity;
     }
 
+    //Fill the array pushing Polyhedron Objects with initial default values
     polys.push(new poly(thetraIndexed, thetraPoint, whiteColor, null, false, true, 0));
     polys.push(new poly(esaIndexed, esaPoint, whiteColor, null, false, true, 0));
     polys.push(new poly(ottaIndexed, ottaPoint, whiteColor, null, false, true, 0));
@@ -31,78 +35,98 @@ $(document).ready(function () {
     polys.push(new poly(icosaIndexed, icosaPoint, whiteColor, null, false, true, 0));
 
     $('#aThetra').click(function () {
+        
         index = 0;
-        $('#x3dContainer').css({"display": "block"});
-        $('#controlsContainer').css({"display": "block"});
-        $('indexedfaceset').attr('coordindex', polys[index].indexed);
-        $('coordinate').attr('point', polys[index].point);
-        $("#axis").prop('render', polys[index].axis);
-        $("#ts").prop("enabled", polys[index].rotation);
-        setColor(polys[index].color);
+        
         $('#mainTrasform').attr('scale', '3.2 3.2 3.2');
         $('#mainTrasform').attr('rotation', '1 0 0 1.5708');
         $('#adjustTransform').attr('rotation', '0 1 0 -0.15');
         $('#adjustTransform').attr('translation', '0 -0.5 0');
-    });
-
-    $('#aEsa').click(function () {
-        index = 1;
+        
         $('#x3dContainer').css({"display": "block"});
         $('#controlsContainer').css({"display": "block"});
         $('indexedfaceset').attr('coordindex', polys[index].indexed);
         $('coordinate').attr('point', polys[index].point);
         $("#axis").prop('render', polys[index].axis);
         $("#ts").prop("enabled", polys[index].rotation);
-        setColor(polys[index].color);
+        setApparence(polys[index].color, polys[index].opacity, polys[index].texture);
+        
+    });
+
+    $('#aEsa').click(function () {
+        
+        index = 1;
+        
         $('#mainTrasform').attr('scale', '2 2 2');
         $('#mainTrasform').attr('rotation', '0 1 0 0.1');
         $('#adjustTransform').attr('rotation', '0 1 0 0');
         $('#adjustTransform').attr('translation', '0 0 0');
-    });
-
-    $('#aOtta').click(function () {
-        index = 2;
+        
         $('#x3dContainer').css({"display": "block"});
         $('#controlsContainer').css({"display": "block"});
         $('indexedfaceset').attr('coordindex', polys[index].indexed);
         $('coordinate').attr('point', polys[index].point);
         $("#axis").prop('render', polys[index].axis);
         $("#ts").prop("enabled", polys[index].rotation);
-        setColor(polys[index].color);
+        setApparence(polys[index].color, polys[index].opacity, polys[index].texture);
+        
+    });
+
+    $('#aOtta').click(function () {
+        
+        index = 2;
+        
         $('#mainTrasform').attr('scale', '3 3 3');
         $('#mainTrasform').attr('rotation', '0 1 0 0.1');
         $('#adjustTransform').attr('rotation', '0 1 0 0');
         $('#adjustTransform').attr('translation', '0 0 0');
-    });
-
-    $('#aDodeca').click(function () {
-        index = 3;
+        
         $('#x3dContainer').css({"display": "block"});
         $('#controlsContainer').css({"display": "block"});
         $('indexedfaceset').attr('coordindex', polys[index].indexed);
         $('coordinate').attr('point', polys[index].point);
         $("#axis").prop('render', polys[index].axis);
         $("#ts").prop("enabled", polys[index].rotation);
-        setColor(polys[index].color);
+        setApparence(polys[index].color, polys[index].opacity, polys[index].texture);
+        
+    });
+
+    $('#aDodeca').click(function () {
+        
+        index = 3;
+        
         $('#mainTrasform').attr('scale', '1.5 1.5 1.5');
         $('#mainTrasform').attr('rotation', '0 0 0 0');
         $('#adjustTransform').attr('rotation', '0 1 0 -0.453');
         $('#adjustTransform').attr('translation', '0 0 0');
-    });
-
-    $('#aIcosa').click(function () {
-        index = 4;
+        
         $('#x3dContainer').css({"display": "block"});
         $('#controlsContainer').css({"display": "block"});
         $('indexedfaceset').attr('coordindex', polys[index].indexed);
         $('coordinate').attr('point', polys[index].point);
         $("#axis").prop('render', polys[index].axis);
         $("#ts").prop("enabled", polys[index].rotation);
-        setColor(polys[index].color);
+        setApparence(polys[index].color, polys[index].opacity, polys[index].texture);
+        
+    });
+
+    $('#aIcosa').click(function () {
+        
+        index = 4;
+        
         $('#mainTrasform').attr('scale', '3 3 3');
         $('#mainTrasform').attr('rotation', '0 0 0 0');
         $('#adjustTransform').attr('rotation', '0 1 0 0.1');
         $('#adjustTransform').attr('translation', '0 0 0');
+        
+        $('#x3dContainer').css({"display": "block"});
+        $('#controlsContainer').css({"display": "block"});
+        $('indexedfaceset').attr('coordindex', polys[index].indexed);
+        $('coordinate').attr('point', polys[index].point);
+        $("#axis").prop('render', polys[index].axis);
+        $("#ts").prop("enabled", polys[index].rotation);
+        setApparence(polys[index].color, polys[index].opacity, polys[index].texture);
+        
     });
 
     $('#aHome').click(function () {
@@ -122,6 +146,7 @@ $(document).ready(function () {
             $("#imPoly").replaceWith('<material id="polyColor" diffuseColor="' + color + '"></material>');
         else
             document.getElementById("polyColor").setAttribute("diffuseColor", color);
+        polys[index].texture = null;
     }
 
     //set color picker 
@@ -143,6 +168,13 @@ $(document).ready(function () {
     var title = $(document).find("title").text();
     $("#myModalLabel").text(title);
 
+    function setOpacity(value) {
+        if (!$('#imPoly').length) {
+            $('#polyColor').attr('transparency', value);
+            $('#slider').slider("value", value * 10);
+        }
+    }
+
     //set opacity slider
     $('#slider').slider({
         step: 1,
@@ -153,14 +185,11 @@ $(document).ready(function () {
                 var value = $('#slider').slider('value');
                 var decimal = value / 10;
                 $('#polyColor').attr('transparency', decimal);
+                polys[index].opacity = decimal;
+            } else {
+                $('#slider').slider('value', 0);
             }
         }
-    });
-
-    //change texture on button click
-    $("#texture").on("click", function () {
-        $("#polyColor").replaceWith('<ImageTexture id="imPoly" url="media/textures/travertine.jpeg" repeatS="false" repeatT="false" scale="true"><ImageTexture/>');
-        $('#slider').slider("value", 0);
     });
 
     //toggle rotation
@@ -179,14 +208,37 @@ $(document).ready(function () {
         polys[index].axis = state;
     });
 
+    function setTexture(fileName) {
+        if ($("#polyColor").length)
+            $("#polyColor").replaceWith('<ImageTexture id="imPoly" url="media/textures/' + fileName + '" repeatS="false" repeatT="false" scale="true"><ImageTexture/>');
+        else
+            $('#imPoly').prop('url', 'media/textures/' + fileName);
+        $('#textureSelect').val(fileName);
+        $('#slider').slider("value", 0);
+    }
+
     //change texture on select change
     $('#textureSelect').on('change', function () {
         var fileName = $('#textureSelect').val();
         if (fileName !== 'null') {
-            $("#polyColor").replaceWith('<ImageTexture id="imPoly" url="media/textures/' + fileName + '" repeatS="false" repeatT="false" scale="true"><ImageTexture/>');
+            if ($("#polyColor").length)
+                $("#polyColor").replaceWith('<ImageTexture id="imPoly" url="media/textures/' + fileName + '" repeatS="false" repeatT="false" scale="true"><ImageTexture/>');
+            else
+                $('#imPoly').prop('url', 'media/textures/' + fileName);
             polys[index].texture = fileName;
+            $('#slider').slider("value", 0);
+        } else {
+            setColor(polys[index].color);
         }
     });
+
+    function setApparence(color, opacity, fileName) {
+        if (fileName === null) {
+            setColor(color);
+            setOpacity(opacity);
+            $('#textureSelect').val('null');
+        } else {
+            setTexture(fileName);
+        }
+    }
 });
-
-

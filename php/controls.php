@@ -10,7 +10,7 @@
         Rotazione
     </button>
 
-    <!-- Center Polyhedron View Button -->
+    <!-- Toggle Axis -->
     <button type="button" id="toggleAxis" class="btn btn-warning">
         Visualizza/Nascondi Assi
     </button>
@@ -22,15 +22,17 @@
     <!-- Slider for opacity regolation -->
     <label for="slider" class="Label">Opacità</label>
     <div id="slider" class="ui-slider-horizontal"></div>
-   
-        <label for="textureSelect" class="Label">Textures</label><br/>
-        <select name="textureSelect" id="textureSelect">
-            <?php
-            $files = scandir('media/textures');
-            $length = count($files);
-            echo '<option value="null" selected>Scegli una Texture</option>';
-            for ($i = 2; $i < $length; $i++)
-                echo '<option value="' . $files[$i] . '">' . substr($files[$i], 0, -4) . '</option>';
-            ?>   
-        </select>
+    
+    <!-- Select Texture picking jpeg files on media/textures --> 
+    <label for="textureSelect" class="Label">Textures</label><br/>
+    <select name="textureSelect" id="textureSelect">
+        <?php
+        $files = scandir('media/textures');
+        $length = count($files);
+        echo '<option value="null" selected>Scegli una Texture</option>';
+        for ($i = 2; $i < $length; $i++)
+            echo '<option value="' . $files[$i] . '">' . substr($files[$i], 0, -4) . '</option>';
+        ?>   
+    </select>
+    
 </div>
