@@ -47,7 +47,7 @@ button {
     margin-top: 10px;
 }
 
-#slider {
+#slider, #spin_slider {
     margin-left: 585px;
      width: 200px;
 }

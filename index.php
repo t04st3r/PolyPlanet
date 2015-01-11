@@ -145,7 +145,7 @@
                 </scene>
             </x3d>
         </div>
-        <?php include_once 'php/controls.php';?>
+        <?php include_once 'php/controls.php'; ?>
         <?php include_once 'php/modal.php'; ?>
     </body>
 </html>

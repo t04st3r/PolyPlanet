@@ -1,7 +1,7 @@
 <div id="controlsContainer">
 
     <!-- Show Polihedra information Button triggering modal window -->
-    <button  data-toggle="modal" class="btn btn-warning" data-target="#myModal">
+    <button  data-toggle="modal" class="btn btn-warning" id="startModal">
         Informazioni
     </button>
 
@@ -23,13 +23,17 @@
     <label for="slider" class="Label">Opacità</label>
     <div id="slider" class="ui-slider-horizontal"></div>
     
+    <!-- Slider for rotation spin regolation -->
+    <label for="spin_slider" class="Label">Velocità di rotazione</label>
+    <div id="spin_slider" class="ui-slider-horizontal"></div>
+    
     <!-- Select Texture picking jpeg files on media/textures --> 
     <label for="textureSelect" class="Label">Textures</label><br/>
     <select name="textureSelect" id="textureSelect">
         <?php
         $files = scandir('media/textures');
         $length = count($files);
-        echo '<option value="null" selected>Scegli una Texture</option>';
+        echo '<option value="null" selected>Nessuna Texture</option>';
         for ($i = 2; $i < $length; $i++)
             echo '<option value="' . $files[$i] . '">' . substr($files[$i], 0, -4) . '</option>';
         ?>   
