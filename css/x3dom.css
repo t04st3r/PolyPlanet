@@ -10,9 +10,7 @@
  */
 
 body {
-    font-size:110%;
     font-family:verdana, sans-serif;font-family: Helvetica, sans-serif;
-    /* font-size: 12px; */
     background-image:url('../media/planet.jpg');
     background-repeat:repeat;
     background-attachment:fixed;
@@ -49,7 +47,7 @@ button {
 
 #slider, #spin_slider {
     margin-left: 585px;
-     width: 200px;
+    width: 200px;
 }
 
 .Label {
@@ -65,7 +63,20 @@ select {
     margin-left: 10px;
     font-size: 14px;
     color: darkblue;
+
+}
+
+#teaImage {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin-left: 26%;
+    margin-right: auto;
     
+}
+
+#dialogTitle {
+    text-align: center;
 }
 
 X3D, x3d {

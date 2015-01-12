@@ -2,7 +2,7 @@
 
     <!-- Show Polihedra information Button triggering modal window -->
     <button  data-toggle="modal" class="btn btn-warning" id="startModal">
-        Informazioni
+        Informazioni Wikipedia
     </button>
 
     <!-- Toggle Rotation -->
