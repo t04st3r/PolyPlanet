@@ -146,6 +146,7 @@
             </x3d>
         </div>
         <?php include_once 'php/controls.php'; ?>
+        <?php include_once 'php/home.php'; ?>
         <?php include_once 'php/modal.php'; ?>
         <?php include_once 'php/dialog.php'; ?>
     </body>

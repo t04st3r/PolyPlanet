@@ -6,9 +6,8 @@
     </p>
     <div id="imageContainer"><img id="teaImage" src="media/sixPlatoSolid.jpg"/></div><hr>
     <p>Considerato oramai come il sesto solido platonico, lo Utah Teapot è il simbolo della 3D computer graphics 
-    e non potevamo scordarci di lui!</p>
+    e non potevamo non aggiungerlo!</p>
     <p><a target="_blank" href="http://www.sjbaker.org/wiki/index.php?title=The_History_of_The_Teapot">Maggiori Informazioni</a><br/>
        <a target="_blank" href="http://it.wikipedia.org/wiki/Solido_platonico">Solidi Platonici</a>
     </p>
 </div>
-

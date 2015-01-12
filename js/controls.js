@@ -53,7 +53,8 @@ function poly() {
         $('#mainTrasform').attr('rotation', '1 0 0 1.5708');
         $('#adjustTransform').attr('rotation', '0 1 0 -0.15');
         $('#adjustTransform').attr('translation', '0 -0.5 0');
-
+        
+        $('#homeContent').css({"display": "none"});
         $('#x3dContainer').css({"display": "block"});
         $('#controlsContainer').css({"display": "block"});
         $('indexedfaceset').attr('coordindex', polys[index].indexed);
@@ -72,12 +73,13 @@ function poly() {
         $('#mainTrasform').attr('rotation', '0 1 0 0.1');
         $('#adjustTransform').attr('rotation', '0 1 0 0');
         $('#adjustTransform').attr('translation', '0 0 0');
-
+        
+        $('#homeContent').css({"display": "none"});
         $('#x3dContainer').css({"display": "block"});
         $('#controlsContainer').css({"display": "block"});
         $('coordinate').attr('point', polys[index].point);
         $('indexedfaceset').attr('coordindex', polys[index].indexed);
-
+        
         $("#ts").prop("enabled", polys[index].rotation);
         setSpin();
         setApparence(polys[index].color, polys[index].opacity, polys[index].texture);
@@ -92,7 +94,8 @@ function poly() {
         $('#mainTrasform').attr('rotation', '0 1 0 0.1');
         $('#adjustTransform').attr('rotation', '0 1 0 0');
         $('#adjustTransform').attr('translation', '0 0 0');
-
+        
+        $('#homeContent').css({"display": "none"});
         $('#x3dContainer').css({"display": "block"});
         $('#controlsContainer').css({"display": "block"});
         $('indexedfaceset').attr('coordindex', polys[index].indexed);
@@ -111,7 +114,8 @@ function poly() {
         $('#mainTrasform').attr('rotation', '0 0 0 0');
         $('#adjustTransform').attr('rotation', '0 1 0 -0.453');
         $('#adjustTransform').attr('translation', '0 0 0');
-
+        
+        $('#homeContent').css({"display": "none"});
         $('#x3dContainer').css({"display": "block"});
         $('#controlsContainer').css({"display": "block"});
         $('indexedfaceset').attr('coordindex', polys[index].indexed);
@@ -130,7 +134,8 @@ function poly() {
         $('#mainTrasform').attr('rotation', '0 0 0 0');
         $('#adjustTransform').attr('rotation', '0 1 0 0.1');
         $('#adjustTransform').attr('translation', '0 0 0');
-
+        
+        $('#homeContent').css({"display": "none"});
         $('#x3dContainer').css({"display": "block"});
         $('#controlsContainer').css({"display": "block"});
         $('indexedfaceset').attr('coordindex', polys[index].indexed);
@@ -149,6 +154,7 @@ function poly() {
         $('#mainTrasform').attr('rotation', '1 0 0 -1.57');
         $('#adjustTransform').attr('translation', '0 -1.5 0');
 
+        $('#homeContent').css({"display": "none"});
         $('#x3dContainer').css({"display": "block"});
         $('#controlsContainer').css({"display": "block"});
         $('indexedfaceset').attr('coordindex', polys[index].indexed);
@@ -163,6 +169,7 @@ function poly() {
         index = -1;
         $('#x3dContainer').css({"display": "none"});
         $('#controlsContainer').css({"display": "none"});
+        $('#homeContent').css({"display": "block"});
     });
 
     function setSpin() {
@@ -185,7 +192,7 @@ function poly() {
                 if (returnedValue) {
                     var regExp = new RegExp('href="/', 'g');
                     polys[index].html = polys[index].html.replace(regExp, 'target="_blank" href="http://it.wikipedia.org/');
-                    polys[index].html += '<style>h2, h3 {font-size:16px} table {margin-left:auto;margin-right:auto;margin-bottom:20px;width:500px;background-color:lightgoldenrodyellow;} .navbox{display:none;}</style>';
+                    polys[index].html += '<style>h2, h3 {font-size:16px} table {margin-left:auto;margin-right:auto;margin-bottom:20px;width:500px;} .navbox{display:none;}</style>';
                     $('#myModalLabel').text(polys[index].name);
                     $('#modal-div-content').html(polys[index].html);
                     $('#myModal').modal('show');
